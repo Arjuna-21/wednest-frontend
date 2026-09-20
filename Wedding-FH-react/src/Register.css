@@ -1,0 +1,450 @@
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    justify-content: center;
+    background: none;
+}
+
+.container {
+    width: 29vw;
+    height: 90vh;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 40vw;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 253, 249, 0.97);
+    border-radius: 13px;
+    border: none;
+    box-shadow: 3px 3px 6px black;
+}
+
+.heading {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading h1 {
+    margin-top: 20px;
+    color: #62574d;
+}
+.heading p {
+    font-size: 13px;
+}
+
+.input-holder {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 25vw;
+}
+
+.input-holder input{
+    height: 6vh;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 5px black;
+}
+
+.input-holder label {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.email-otp {
+    display: flex;
+    gap: 5px;
+}
+
+.email-otp input {
+    width: 20vw;
+}
+
+.email-otp .otp-btn {
+    width: 5vw;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: skyblue;
+    font-weight: 800;
+    box-shadow: 0 0 5px black;
+    transition: 0.3s;
+}
+
+.email-otp .otp-btn:hover {
+    transform: translateY(-2px);
+}
+
+.verify-btn {
+    width: 10vw;
+    height: 6vh;
+    border-radius: 8px;
+    border: none;
+    background: rgb(83, 83, 245);
+    box-shadow: 0 0 5px black;
+    color: white;
+    font-weight: 800;
+}
+
+.verify-otp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.verify-otp input {
+    width: 15vw;
+}
+.register-btn {
+    width: 8vw;
+    height: 5vh;
+    margin-left: 8vw;
+    border: none;
+    border-radius: 8px;
+    background: #75451d;
+    color: #eee5da;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.register-btn:hover {
+    background: #795a41;
+    color: #eed4b5;
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice p {
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.login-page p {
+    font-weight: 600;
+}
+
+.login-page a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #fff9f0,
+        #f8f1e7
+    );
+}
+
+/* Main container */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.heading h1 {
+    color: #a96820;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.heading p {
+    color: #806b55;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Form */
+.input-holder {
+    width: 100%;
+    max-width: 450px;
+    background: #fffdf9;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #eadbc7;
+    box-shadow: 0 12px 35px rgba(105, 70, 30, 0.12);
+}
+
+/* Labels */
+.input-holder label {
+    display: block;
+    color: #4a3a2a;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+/* Inputs */
+.input-holder input {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    margin-bottom: 18px;
+
+    border: 1px solid #dccbb5;
+    border-radius: 8px;
+
+    background: #fffdf9;
+    color: #4a3a2a;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.input-holder input::placeholder {
+    color: #ad9b86;
+}
+
+.input-holder input:focus {
+    border-color: #a96820;
+    box-shadow: 0 0 0 3px rgba(169, 104, 32, 0.12);
+}
+
+/* Email + OTP */
+.email-otp {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.email-otp input {
+    flex: 1;
+}
+
+.otp-btn {
+    height: 46px;
+    padding: 0 19px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #a96820;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.otp-btn:hover {
+    background: #7d4b16;
+}
+
+/* Verify OTP */
+.verify-otp {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.verify-otp input {
+    flex: 1;
+}
+
+.verify-btn {
+    height: 46px;
+    padding: 0 16px;
+
+    border: 1px solid #a96820;
+    border-radius: 8px;
+
+    background: #fff9f0;
+    color: #a96820;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.verify-btn:hover {
+    background: #a96820;
+    color: white;
+}
+
+/* Register button */
+.register-btn {
+    width: 100%;
+    height: 49px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #a96820,
+        #c58945
+    );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.register-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #8b5519,
+        #a96820
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(169, 104, 32, 0.25);
+}
+
+.register-btn:active {
+    transform: translateY(0);
+}
+
+/* Message */
+.input-holder > p {
+    text-align: center;
+    margin-top: 15px;
+
+    color: #a96820 !important;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* OR */
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 25px 0 20px;
+}
+
+.choice hr {
+    flex: 1;
+
+    border: none;
+    border-top: 1px solid #dfcfbc;
+}
+
+.choice p {
+    color: #a96820;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Login */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 14px;
+}
+
+.login-page p {
+    color: #806b55;
+}
+
+.login-page a {
+    color: #a96820;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.login-page a:hover {
+    color: #7d4b16;
+    text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .heading h1 {
+        font-size: 32px;
+    }
+
+    .input-holder {
+        padding: 25px 20px;
+    }
+
+    .email-otp,
+    .verify-otp {
+        gap: 7px;
+    }
+
+    .otp-btn {
+        padding: 0 14px;
+    }
+
+    .verify-btn {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+}
