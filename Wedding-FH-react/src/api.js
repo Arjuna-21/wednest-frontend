@@ -1,3 +1,3 @@
-const URL = "https://wednest-backend-g75p.onrender.com";
+const API_URL = "https://wednest-backend-g75p.onrender.com";
 
-export default URL;
+export default API_URL;
