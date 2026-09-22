@@ -19,7 +19,7 @@ function Register() {
         if(cooldown > 0) {
             return ;
         }
-        const response = await fetch("http://localhost:9696/send-otp", {
+        const response = await fetch(`${URL}/send-otp`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -45,7 +45,7 @@ function Register() {
     }
 
     const verifyOtp = async () => {
-        const response = await fetch("http://localhost:9696/verify-otp", {
+        const response = await fetch(`${URL}/verify-otp`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -144,42 +144,3 @@ function Register() {
 }
 
 export default Register
-
-
-// import { useState } from "react";
-
-// function OTPButton() {
-//   const [cooldown, setCooldown] = useState(0);
-
-//   const handleSendOTP = async () => {
-//     if (cooldown > 0) return;
-
-//     Your existing send OTP API
-//     await axios.post("http://localhost:9696/send-otp", {...});
-
-//     setCooldown(60);
-
-//     const timer = setInterval(() => {
-//       setCooldown((prev) => {
-//         if (prev <= 1) {
-//           clearInterval(timer);
-//           return 0;
-//         }
-
-//         return prev - 1;
-//       });
-//     }, 1000);
-//   };
-
-//   return (
-//     <button
-//       type="button"
-//       onClick={handleSendOTP}
-//       disabled={cooldown > 0}
-//     >
-//       {cooldown > 0 ? `Resend OTP in ${cooldown}s` : "Send OTP"}
-//     </button>
-//   );
-// }
-
-// export default OTPButton;
