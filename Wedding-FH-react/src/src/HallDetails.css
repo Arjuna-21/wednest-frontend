@@ -1,0 +1,234 @@
+.hall-details-page {
+  min-height: 100vh;
+  background: #fbf8f3;
+  padding: 110px 6% 70px;
+  color: #443a31;
+}
+
+.hall-back-btn i {
+  margin-right: 10px;
+}
+.hall-back-btn {
+  width: 8vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 22px;
+    margin-bottom: 10px;
+    
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.hall-details-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.hall-details-image {
+  height: 480px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.hall-details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hall-details-label {
+  color: #b47727;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.hall-details-info h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  font-weight: 400;
+  color: #70441f;
+  margin: 10px 0 15px;
+}
+
+.hall-details-place {
+  color: #766b61;
+  font-size: 15px;
+}
+
+.hall-details-price {
+  color: #aa6d20;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.hall-details-price span {
+  color: #81756a;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.hall-details-capacity {
+  color: #766b61;
+  margin-top: 10px;
+}
+
+.hall-description {
+  margin-top: 30px;
+}
+
+.hall-description h2,
+.hall-facilities h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #463c33;
+}
+
+.hall-description p {
+  color: #766b61;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.hall-facilities {
+  margin-top: 65px;
+}
+
+.facilities-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.facility-card {
+  background: white;
+  border: 1px solid #eee5da;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 5px 18px rgba(70, 50, 30, 0.05);
+}
+
+.facility-card span {
+  font-size: 25px;
+}
+
+.facility-card h3 {
+  margin: 12px 0 5px;
+  color: #51473e;
+  font-size: 16px;
+}
+
+.facility-card p {
+  margin: 0;
+  color: #81756a;
+  font-size: 13px;
+}
+
+.hall-book-section {
+  margin-top: 60px;
+  padding: 30px 35px;
+  background: linear-gradient(135deg, #fffaf3, #f4e7d7);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hall-book-section p {
+  color: #b47727;
+  font-size: 12px;
+  margin: 0 0 5px;
+}
+
+.hall-book-section h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  color: #463c33;
+}
+
+.hall-book-btn {
+  border: none;
+  background: #bd8130;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hall-book-btn:hover {
+  background: #a86c20;
+}
+
+@media (max-width: 800px) {
+  .hall-details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hall-back-btn {
+        width: 8vw;
+        padding: 9px 18px;
+        font-size: 15px;
+    }
+
+  .hall-facilities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hall-back-btn {
+    width: 6vw;
+
+  }
+
+  .hall-details-image {
+    height: 200px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .hall-book-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.book-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 480px) {
+    .hall-back-btn {
+        width: 30%;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+}

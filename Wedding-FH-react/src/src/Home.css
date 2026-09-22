@@ -1,0 +1,114 @@
+@media (max-width: 450) {
+    .hero-image {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.search-icon {
+    margin: 10px;
+    color: black;
+}
+
+.search-btn i {
+    margin-right: 10px;
+}
+
+.footer {
+  background: #3b2737;
+  color: white;
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-box {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.footer-box p {
+  font-size: 14px;
+}
+.footer-section {
+    margin-left: 50px;
+}
+
+.web-name {
+    margin: 0;
+    padding-bottom: 10px;
+}
+.footer-section h3 {
+  margin-bottom: 18px;
+  color: #E8B8C8;
+}
+
+.footer-section p {
+  color: #E8DDE1;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.footer-section a {
+  display: block;
+  color: #E8DDE1;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.footer-section a:hover {
+  color: #F2C6D5;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  display: inline-block;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .halls-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    padding: 10px 5px 20px;
+  }
+
+  .halls-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .hall-card {
+    min-width: 280px;
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+  }
+  .hall-image {
+    margin: 10px;
+  }
+  .hall-info h2 {
+    font-size: 22px;
+  }
+
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
