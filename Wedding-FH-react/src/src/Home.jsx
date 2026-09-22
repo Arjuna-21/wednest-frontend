@@ -5,15 +5,16 @@ import logoname from "/images/logoname.png"
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Contact from "./Contact";
+import venueImage from "./images/venue.png";
 import WHall from '/images/wedding-hall.jpg';
-import URL from "./api";
+import API_URL from "./api";
 
 function Home() {
   const [halls, setHalls] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${URL}/halls`)
+    fetch(`${API_URL}/halls`)
       .then((response) => response.json())
       .then((data) => {
         setHalls(data.halls);
@@ -25,7 +26,7 @@ function Home() {
     <div className="home">
       <Navbar />
       <section className="hero">
-        <img src="/images/venue.png" alt="Wedding Venue" className="hero-image" />
+        <img src={venueImage} alt="Wedding Venue" className="hero-image" />
         <div className="hero-shade"></div>
         <div className="hero-content">
           <p className="small-title">FIND YOUR PERFECT</p>

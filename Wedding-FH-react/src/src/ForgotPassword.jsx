@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './ForgotPassword.css';
-import URL from './api';
+import API_URL from './api';
 
 function ForgotPassword() {
 
@@ -18,7 +18,7 @@ function ForgotPassword() {
 
     const sendOTP = async () => {
         try {
-            const response = await fetch(`${URL}/forget-password/send-otp`, {
+            const response = await fetch(`${API_URL}/forget-password/send-otp`, {
                 method : "POST",
                 headers : {
                     "Content-Type" : "application/json"
@@ -55,7 +55,7 @@ function ForgotPassword() {
 
     const verifyOTP = async () => {
         try {
-            const response = await fetch(`${URL}/forget-password/verify-otp`, {
+            const response = await fetch(`${API_URL}/forget-password/verify-otp`, {
                 method : "POST",
                 headers : {
                     "Content-Type" : "application/json"
@@ -81,7 +81,7 @@ function ForgotPassword() {
                 setMessage("Passwords doesn't match");
             }
 
-            const response = await fetch(`${URL}/forget-password/reset-password`, {
+            const response = await fetch(`${API_URL}/forget-password/reset-password`, {
                 method : "POST",
                 headers : {
                     "Content-Type" : "application/json"

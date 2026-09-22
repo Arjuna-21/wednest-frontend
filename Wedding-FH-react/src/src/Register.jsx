@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
 import Login from './Login';
-import URL from './api';
+import API_URL from './api';
 
 function Register() {
     const [username, setUsername] = useState("");
@@ -20,7 +20,7 @@ function Register() {
         if(cooldown > 0) {
             return ;
         }
-        const response = await fetch(`${URL}/send-otp`, {
+        const response = await fetch(`${API_URL}/send-otp`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -46,7 +46,7 @@ function Register() {
     }
 
     const verifyOtp = async () => {
-        const response = await fetch(`${URL}/verify-otp`, {
+        const response = await fetch(`${API_URL}/verify-otp`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -67,7 +67,7 @@ function Register() {
 
         e.preventDefault();
         try {
-            const response = await fetch(`${URL}/register`, {
+            const response = await fetch(`${API_URL}/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
