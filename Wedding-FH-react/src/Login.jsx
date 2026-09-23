@@ -58,6 +58,7 @@ function Login() {
                 <label htmlFor="email">Email</label>
 
                 <input
+                    className='email'
                     id="email"
                     type="email"
                     placeholder="Enter Email"
@@ -69,6 +70,7 @@ function Login() {
                 <label htmlFor="password">Password</label>
 
                 <input
+                    className='password'
                     id="password"
                     type="password"
                     placeholder="Enter Password"
@@ -76,8 +78,9 @@ function Login() {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <div class="forget-password">
-                    <Link to='/forget'>Forget Password</Link>
+                <div className="forget-password">
+                    <p></p>
+                    <Link className='forget' to='/forget'>Forget Password</Link>
                 </div>
 
                 <button

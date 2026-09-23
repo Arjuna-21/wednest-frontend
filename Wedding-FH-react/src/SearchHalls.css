@@ -174,13 +174,13 @@
     }
 
     .hall-Image {
-        width: 320px;
+        width: 275px;
         height: 150px;
-        margin: 10px;
     }
 
     .details h2 {
         font-size: 20px;
+        margin-top: 10px;
     }
 
     .details p {

@@ -104,7 +104,7 @@ function ForgotPassword() {
   return (
     <div className='forgot-container'>
         <div class="forget-box">
-            <h2>Forget Password</h2>
+            <h3>Forget Password</h3>
             {
                 step === 1 && (
                     <div class="s1">

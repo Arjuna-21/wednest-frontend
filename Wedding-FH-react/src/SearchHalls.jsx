@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import "./SearchHalls.css";
 import { useNavigate } from 'react-router-dom';
 import WHall from '/images/wedding-hall.jpg';
-import API_URL from './api.js'
+import API_URL from './api';
 
 function SearchHalls() {
 
