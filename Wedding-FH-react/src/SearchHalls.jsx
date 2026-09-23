@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import "./SearchHalls.css";
 import { useNavigate } from 'react-router-dom';
 import WHall from '/images/wedding-hall.jpg';
+import API_URL from './api.js'
 
 function SearchHalls() {
 
@@ -12,7 +13,7 @@ function SearchHalls() {
     const [halls, setHalls] = useState([]);
     const [search, setSearch] = useState("");
     useEffect(() => {
-    fetch(`${URL}/halls`)
+    fetch(`${API_URL}/halls`)
       .then((response) => response.json())
       .then((data) => {
         setHalls(data.halls);
