@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
+import API_URL from './api.js'
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ function Login() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`${URL}/login`, {
+            const response = await fetch(`${API_URL}/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

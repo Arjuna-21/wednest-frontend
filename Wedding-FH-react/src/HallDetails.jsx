@@ -5,6 +5,7 @@ import './Navbar.css'
 import './HallDetails.css';
 import logoname from '/images/logoname.png';
 import WHall from '/images/wedding-hall.jpg';
+import API_URL from './api.js'
 
 function HallDetails() {
 
@@ -14,7 +15,7 @@ function HallDetails() {
     const [hall, setHall] = useState(null);
 
     useEffect(() => {
-        fetch(`${URL}/halls/${id}`)
+        fetch(`${API_URL}/halls/${id}`)
             .then((response) => response.json())
             .then((data) => {
                 setHall(data);

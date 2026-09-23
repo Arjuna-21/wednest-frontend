@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import './MyBookings.css';
 import { Link } from 'react-router-dom'
 import WHall from '/images/wedding-hall.jpg'
+import API_URL from './api.js'
 
 function MyBookings() {
     const [bookings, setBookings] = useState([]);
@@ -15,7 +16,7 @@ function MyBookings() {
         const fetchBookings = async () => {
             try {
                 const userId = user.id;
-                const response = await fetch(`${URL}/bookings/${userId}`);
+                const response = await fetch(`${API_URL}/bookings/${userId}`);
 
                 if (!response.ok) {
                     throw new Error("Failed to fetch bookings");

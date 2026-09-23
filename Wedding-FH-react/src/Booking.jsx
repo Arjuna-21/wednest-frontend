@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Booking.css";
-import URL from './api';
+import API_URL from './api';
 import { useNavigate, useParams } from 'react-router-dom';
 
 function Booking() {
@@ -24,7 +24,7 @@ function Booking() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`${URL}/bookings`, {
+            const response = await fetch(`${API_URL}/bookings`, {
                 method : "POST",
                 headers : {"Content-Type" :  "application/json"},
                 body : JSON.stringify({

@@ -6,13 +6,14 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Contact from "./Contact";
 import WHall from '/images/wedding-hall.jpg';
+import API_URL from './api.js'
 
 function Home() {
   const [halls, setHalls] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${URL}/halls`)
+    fetch(`${API_URL}/halls`)
       .then((response) => response.json())
       .then((data) => {
         setHalls(data.halls);
